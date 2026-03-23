@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#3e5653",
+              "background-light": "#f7f7f7",
+              "background-dark": "#171b1a",
+            },
+            fontFamily: {
+              "display": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<title>UNIQ Empresas - Login</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased text-slate-900 dark:text-slate-100">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden">
+<!-- Header / Logo Area -->
+<div class="flex flex-col items-center pt-12 pb-8 px-6">
+<div class="w-32 h-12 mb-8 flex items-center justify-center">
+<img alt="UNIQ Empresas Logo" class="max-w-full h-auto" data-alt="Logotipo moderno da empresa UNIQ Empresas" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBC6QOUkicJtEQJaJVBMFALWPX7l-uE93Ng0HOaYjET0WhxxmjbklDCYK13VYeRiIMQmm6nZ21rAXWzn6PzPRZ5sw-DlGbm-SEZLkAGJ578CoDfc6SApFgYXIDt_bxHtL_n2C3SF4m0jioN29Ah5V1VzdxxEPFHJ_jLPEZDB4JJfjcSeqM6BScdz4-kX2-J1-ZKquK5HwSaHnZtimexfWJEkObTiFADqX2M3yevFYhkc2kG_JD_sxz8fpKyTCmQgr5XJ6PIohIz6EH_"/>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Bem-vindo de volta</h1>
+<p class="text-slate-600 dark:text-slate-400 text-sm mt-2 text-center">Acesse o painel da sua empresa para gerenciar seus serviços.</p>
+</div>
+<!-- Login Form Container -->
+<div class="flex w-full px-6 flex-col max-w-md mx-auto">
+<form action="#" class="space-y-4">
+<!-- Email Field -->
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300 ml-1" for="email">E-mail corporativo</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">mail</span>
+<input class="w-full pl-10 pr-4 h-12 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark focus:ring-2 focus:ring-primary focus:border-primary text-slate-900 dark:text-slate-100 transition-all" id="email" placeholder="seu@email.com.br" type="email"/>
+</div>
+</div>
+<!-- Password Field -->
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between items-center ml-1">
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="password">Senha</label>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">lock</span>
+<input class="w-full pl-10 pr-12 h-12 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark focus:ring-2 focus:ring-primary focus:border-primary text-slate-900 dark:text-slate-100 transition-all" id="password" placeholder="Digite sua senha" type="password"/>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-xl">visibility</span>
+</button>
+</div>
+</div>
+<!-- Remember Me & Forgot Password -->
+<div class="flex items-center justify-between py-1">
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="rounded text-primary focus:ring-primary border-slate-300 dark:border-slate-700 bg-white dark:bg-background-dark" type="checkbox"/>
+<span class="text-sm text-slate-600 dark:text-slate-400 group-hover:text-slate-900 dark:group-hover:text-slate-200 transition-colors">Lembrar-me</span>
+</label>
+<a class="text-sm font-semibold text-primary hover:underline" href="#">Esqueci minha senha</a>
+</div>
+<!-- Submit Button -->
+<button class="w-full bg-primary hover:bg-opacity-90 text-white font-semibold h-12 rounded-lg shadow-sm transition-all transform active:scale-[0.98] mt-2" type="submit">
+                    Entrar
+                </button>
+</form>
+<!-- Divider -->
+<div class="relative my-8">
+<div class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-slate-200 dark:border-slate-800"></div>
+</div>
+<div class="relative flex justify-center text-sm">
+<span class="px-3 bg-background-light dark:bg-background-dark text-slate-500">Ou continue com</span>
+</div>
+</div>
+<!-- Google Login -->
+<button class="w-full flex items-center justify-center gap-3 bg-white dark:bg-background-dark border border-slate-200 dark:border-slate-800 h-12 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors shadow-sm">
+<svg height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+<path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
+<path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path>
+<path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"></path>
+<path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 12-4.53z" fill="#EA4335"></path>
+</svg>
+<span class="text-slate-700 dark:text-slate-300 font-medium">Google</span>
+</button>
+<!-- Sign Up Link -->
+<p class="mt-10 text-center text-sm text-slate-600 dark:text-slate-400">
+                Ainda não tem conta? 
+                <a class="text-primary font-bold hover:underline" href="#">Cadastre-se grátis</a>
+</p>
+</div>
+<!-- Spacer for push to bottom -->
+<div class="flex-grow"></div>
+<!-- Bottom Navigation Example Style -->
+<div class="flex gap-2 border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark px-4 pb-6 pt-2 mt-12">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined text-2xl">home</span>
+<span class="text-[10px] font-medium">Início</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined text-2xl">help</span>
+<span class="text-[10px] font-medium">Suporte</span>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined text-2xl">info</span>
+<span class="text-[10px] font-medium">Sobre</span>
+</a>
+</div>
+</div>
+</body></html>

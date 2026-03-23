@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#3e5653",
+              "background-light": "#f7f7f7",
+              "background-dark": "#171b1a",
+            },
+            fontFamily: {
+              "display": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<title>UNIQ Empresas - Central de Notificações</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header -->
+<header class="sticky top-0 z-10 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10 px-4 py-4">
+<div class="flex items-center justify-between max-w-2xl mx-auto w-full">
+<div class="flex items-center gap-3">
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-primary">arrow_back</span>
+</button>
+<h1 class="text-xl font-bold tracking-tight">Notificações</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-primary">done_all</span>
+</button>
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-primary">settings</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-1 max-w-2xl mx-auto w-full pb-24">
+<!-- Filters -->
+<div class="flex gap-2 p-4 overflow-x-auto no-scrollbar">
+<button class="flex h-9 shrink-0 items-center justify-center rounded-lg bg-primary text-white px-5 text-sm font-medium">
+                Todas
+            </button>
+<button class="flex h-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 dark:bg-primary/20 text-primary px-5 text-sm font-medium hover:bg-primary/20 transition-colors">
+                Não lidas
+            </button>
+<button class="flex h-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 dark:bg-primary/20 text-primary px-5 text-sm font-medium hover:bg-primary/20 transition-colors">
+                Alertas
+            </button>
+<button class="flex h-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 dark:bg-primary/20 text-primary px-5 text-sm font-medium hover:bg-primary/20 transition-colors">
+                Sistema
+            </button>
+<button class="flex h-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 dark:bg-primary/20 text-primary px-5 text-sm font-medium hover:bg-primary/20 transition-colors">
+                Financeiro
+            </button>
+</div>
+<!-- Section: Recentes -->
+<section>
+<div class="px-4 py-2 flex justify-between items-center">
+<h2 class="text-sm font-bold uppercase tracking-wider text-primary/70">Recentes</h2>
+<span class="text-xs font-medium text-primary/50">3 novas</span>
+</div>
+<div class="space-y-1">
+<!-- Notification Item: System Update (Unread) -->
+<div class="flex gap-4 bg-white dark:bg-slate-800/50 p-4 border-l-4 border-primary shadow-sm">
+<div class="flex size-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+<span class="material-symbols-outlined">update</span>
+</div>
+<div class="flex flex-1 flex-col">
+<div class="flex justify-between items-start">
+<p class="font-semibold text-slate-900 dark:text-slate-100">Atualização de Sistema</p>
+<span class="text-[10px] font-bold text-primary bg-primary/10 px-1.5 py-0.5 rounded uppercase">Novo</span>
+</div>
+<p class="text-sm text-slate-600 dark:text-slate-400 mt-0.5">Uma nova versão do UNIQ Empresas (v2.4.0) já está disponível com melhorias de performance.</p>
+<p class="text-xs text-slate-400 mt-2">há 5 minutos</p>
+</div>
+<div class="flex flex-col gap-2">
+<button class="material-symbols-outlined text-primary/40 hover:text-primary transition-colors text-xl">radio_button_unchecked</button>
+<button class="material-symbols-outlined text-primary/40 hover:text-primary transition-colors text-xl">archive</button>
+</div>
+</div>
+<!-- Notification Item: Alert (Unread) -->
+<div class="flex gap-4 bg-white dark:bg-slate-800/50 p-4 border-l-4 border-orange-500 shadow-sm">
+<div class="flex size-12 shrink-0 items-center justify-center rounded-xl bg-orange-100 text-orange-600">
+<span class="material-symbols-outlined">warning</span>
+</div>
+<div class="flex flex-1 flex-col">
+<p class="font-semibold text-slate-900 dark:text-slate-100">Tentativa de Acesso</p>
+<p class="text-sm text-slate-600 dark:text-slate-400 mt-0.5">Identificamos um acesso em um novo dispositivo: Chrome em Windows, São Paulo - BR.</p>
+<p class="text-xs text-slate-400 mt-2">há 12 minutos</p>
+</div>
+<div class="flex flex-col gap-2">
+<button class="material-symbols-outlined text-primary/40 hover:text-primary transition-colors text-xl">radio_button_unchecked</button>
+<button class="material-symbols-outlined text-primary/40 hover:text-primary transition-colors text-xl">archive</button>
+</div>
+</div>
+<!-- Notification Item: Success -->
+<div class="flex gap-4 bg-background-light dark:bg-background-dark/40 p-4 border-l-4 border-transparent opacity-80">
+<div class="flex size-12 shrink-0 items-center justify-center rounded-xl bg-green-100 text-green-600">
+<span class="material-symbols-outlined">check_circle</span>
+</div>
+<div class="flex flex-1 flex-col">
+<p class="font-medium text-slate-700 dark:text-slate-300">Pagamento Processado</p>
+<p class="text-sm text-slate-500 dark:text-slate-500 mt-0.5">O lote de pagamentos #8842 foi processado com sucesso para 12 colaboradores.</p>
+<p class="text-xs text-slate-400 mt-2">há 1 hora</p>
+</div>
+<div class="flex flex-col gap-2">
+<button class="material-symbols-outlined text-green-600 text-xl">check_circle</button>
+<button class="material-symbols-outlined text-primary/40 hover:text-primary transition-colors text-xl">archive</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Section: Ontem -->
+<section class="mt-6">
+<div class="px-4 py-2">
+<h2 class="text-sm font-bold uppercase tracking-wider text-primary/70">Ontem</h2>
+</div>
+<div class="space-y-1">
+<!-- Notification Item: Info -->
+<div class="flex gap-4 bg-background-light dark:bg-background-dark/40 p-4 border-l-4 border-transparent opacity-80">
+<div class="flex size-12 shrink-0 items-center justify-center rounded-xl bg-blue-100 text-blue-600">
+<span class="material-symbols-outlined">info</span>
+</div>
+<div class="flex flex-1 flex-col">
+<p class="font-medium text-slate-700 dark:text-slate-300">Relatório Mensal</p>
+<p class="text-sm text-slate-500 dark:text-slate-500 mt-0.5">Seu fechamento mensal de Outubro já está disponível para download no painel financeiro.</p>
+<p class="text-xs text-slate-400 mt-2">Ontem às 14:30</p>
+</div>
+<div class="flex flex-col gap-2">
+<button class="material-symbols-outlined text-green-600 text-xl">check_circle</button>
+<button class="material-symbols-outlined text-primary/40 hover:text-primary transition-colors text-xl">archive</button>
+</div>
+</div>
+<!-- Notification Item: Warning -->
+<div class="flex gap-4 bg-background-light dark:bg-background-dark/40 p-4 border-l-4 border-transparent opacity-80">
+<div class="flex size-12 shrink-0 items-center justify-center rounded-xl bg-red-100 text-red-600">
+<span class="material-symbols-outlined">error</span>
+</div>
+<div class="flex flex-1 flex-col">
+<p class="font-medium text-slate-700 dark:text-slate-300">Certificado Expirando</p>
+<p class="text-sm text-slate-500 dark:text-slate-500 mt-0.5">O certificado digital A1 da empresa expira em menos de 7 dias. Renove agora para evitar interrupções.</p>
+<p class="text-xs text-slate-400 mt-2">Ontem às 09:15</p>
+</div>
+<div class="flex flex-col gap-2">
+<button class="material-symbols-outlined text-green-600 text-xl">check_circle</button>
+<button class="material-symbols-outlined text-primary/40 hover:text-primary transition-colors text-xl">archive</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white dark:bg-background-dark border-t border-primary/10 px-4 pb-6 pt-2 z-20">
+<div class="flex max-w-2xl mx-auto justify-between items-center">
+<a class="flex flex-1 flex-col items-center gap-1 text-primary/50 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Início</span>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-primary/50 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">list_alt</span>
+<span class="text-[10px] font-medium">Extrato</span>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-primary" href="#">
+<div class="relative">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">notifications</span>
+<span class="absolute -top-1 -right-1 flex size-2.5 items-center justify-center rounded-full bg-primary ring-2 ring-white"></span>
+</div>
+<span class="text-[10px] font-bold">Notificações</span>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-primary/50 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Perfil</span>
+</a>
+</div>
+</nav>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</body></html>

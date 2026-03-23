@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>UNIQ Empresas - Gestão Inteligente</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3e5653",
+                        "background-light": "#f7f7f7",
+                        "background-dark": "#171b1a",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(62, 86, 83, 0.1);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<!-- Fixed Glassmorphism Navbar -->
+<nav class="fixed top-0 left-0 right-0 z-50 glass-nav">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-16">
+<div class="flex items-center gap-3">
+<div class="size-10 bg-primary rounded-lg flex items-center justify-center overflow-hidden">
+<img alt="UNIQ Logo" class="w-full h-full object-cover" data-alt="UNIQ Logo icon with geometric shapes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYkDFclrkWpiYgXl4tgBWKzHrk1gglILKeKRF7jlnEEewGR8rG7rgxa8ke9anZ2srtCeg9zMw9kRjSn3bDINmqGbJh8PZ4ss453Ih-436eVPWEzod0Vu0j0bKQ2cETrYmRsG0h9N7p6Z38EMFmakNRBtc6zl05u_yWNi3LlW-oa6sWUtYO_Vw58nffLUQUsXofCpCgP9aCimE4EfmyK_LrmxyPkdTtHIGZlSIEjKKsafFBula3TtfFZO1EZIKyRYR6l6kQJJwIB1VL"/>
+</div>
+<span class="text-xl font-bold tracking-tight text-primary">UNIQ Empresas</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#funciona">Como Funciona</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#modulos">Módulos</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#precos">Preços</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-sm font-bold text-primary px-4 py-2">Entrar</button>
+<button class="bg-primary text-white text-sm font-bold px-5 py-2 rounded-lg hover:opacity-90 transition-opacity">Começar Agora</button>
+</div>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="pt-32 pb-16 px-4 @container">
+<div class="max-w-7xl mx-auto flex flex-col gap-10 @[864px]:flex-row @[864px]:items-center">
+<div class="flex-1 flex flex-col gap-6">
+<h1 class="text-4xl @[480px]:text-6xl font-black leading-tight tracking-tight text-slate-900 dark:text-slate-50">
+                    Gerencie sua empresa de forma <span class="text-primary">inteligente</span>
+</h1>
+<p class="text-lg text-slate-600 dark:text-slate-400 max-w-xl">
+                    A plataforma completa para impulsionar a gestão do seu negócio com eficiência, tecnologia e integração total de processos.
+                </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="bg-primary text-white h-14 px-8 rounded-xl font-bold text-lg hover:scale-[1.02] transition-transform flex items-center justify-center">
+                        Começar Grátis
+                    </button>
+<button class="bg-primary/10 text-primary h-14 px-8 rounded-xl font-bold text-lg hover:bg-primary/20 transition-colors flex items-center justify-center">
+                        Agendar Demonstração
+                    </button>
+</div>
+</div>
+<div class="flex-1">
+<div class="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800">
+<div class="aspect-video bg-slate-200" data-alt="Dashboard interface showing analytics and charts" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCSEDCVL0QVwhQ_2uWXgS7COcNcArPpx_Yn5aPw2-CTdpCigniPAb8zP4uQcl06HlenthdFoE0jX1uF3w_Z0cLQFWpArOt1EieOzcyTdK1_6x8qt6xqYJsRU5dJXdCyzvOLSTth25ICZrW_8hCIWV_nFRcW1K_k2GL7Wr9St0sQ5FaZfMFxWfVfkXk6B00pp86yjcXf1F2EriBGSkHnpWMPczz3HYH2orUc9yD4iWfTHHRkvvugGSLod0kp5-Q_18E1j831Iogikq2x"); background-size: cover;'></div>
+</div>
+</div>
+</div>
+</header>
+<!-- Como Funciona Section -->
+<section class="py-20 bg-white dark:bg-background-dark/50" id="funciona">
+<div class="max-w-7xl mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold mb-4">Como Funciona</h2>
+<p class="text-slate-600 dark:text-slate-400">Quatro passos simples para transformar sua gestão</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="bg-background-light dark:bg-background-dark p-8 rounded-2xl border border-slate-200 dark:border-slate-800">
+<span class="material-symbols-outlined text-4xl text-primary mb-4">person_add</span>
+<h3 class="text-xl font-bold mb-2">Cadastro Rápido</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm">Crie sua conta em segundos e comece a explorar nossa plataforma intuitiva.</p>
+</div>
+<div class="bg-background-light dark:bg-background-dark p-8 rounded-2xl border border-slate-200 dark:border-slate-800">
+<span class="material-symbols-outlined text-4xl text-primary mb-4">account_tree</span>
+<h3 class="text-xl font-bold mb-2">Integração de Dados</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm">Conecte seus bancos e ferramentas favoritas sem complicações técnicas.</p>
+</div>
+<div class="bg-background-light dark:bg-background-dark p-8 rounded-2xl border border-slate-200 dark:border-slate-800">
+<span class="material-symbols-outlined text-4xl text-primary mb-4">settings_input_component</span>
+<h3 class="text-xl font-bold mb-2">Configuração</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm">Escolha e personalize os módulos ideais para as necessidades da sua empresa.</p>
+</div>
+<div class="bg-background-light dark:bg-background-dark p-8 rounded-2xl border border-slate-200 dark:border-slate-800">
+<span class="material-symbols-outlined text-4xl text-primary mb-4">monitoring</span>
+<h3 class="text-xl font-bold mb-2">Gestão em Tempo Real</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm">Acompanhe indicadores e tome decisões baseadas em dados atualizados.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Módulos Section -->
+<section class="py-20" id="modulos">
+<div class="max-w-7xl mx-auto px-4">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+<div>
+<h2 class="text-3xl font-bold mb-2">Módulos Especializados</h2>
+<p class="text-slate-600 dark:text-slate-400">Ferramentas modulares que crescem com você</p>
+</div>
+<button class="text-primary font-bold flex items-center gap-2">Ver todos <span class="material-symbols-outlined">arrow_forward</span></button>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
+<!-- Module Cards -->
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-100 dark:border-slate-800 flex flex-col gap-4 hover:shadow-md transition-shadow">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">groups</span>
+</div>
+<h4 class="font-bold">Gestão de Pessoas</h4>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-100 dark:border-slate-800 flex flex-col gap-4 hover:shadow-md transition-shadow">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+</div>
+<h4 class="font-bold">Financeiro</h4>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-100 dark:border-slate-800 flex flex-col gap-4 hover:shadow-md transition-shadow">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">hub</span>
+</div>
+<h4 class="font-bold">CRM Vendas</h4>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-100 dark:border-slate-800 flex flex-col gap-4 hover:shadow-md transition-shadow">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">inventory_2</span>
+</div>
+<h4 class="font-bold">Estoque &amp; Logística</h4>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-100 dark:border-slate-800 flex flex-col gap-4 hover:shadow-md transition-shadow">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">receipt_long</span>
+</div>
+<h4 class="font-bold">Fiscal &amp; Notas</h4>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-100 dark:border-slate-800 flex flex-col gap-4 hover:shadow-md transition-shadow">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">task</span>
+</div>
+<h4 class="font-bold">Projetos</h4>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-100 dark:border-slate-800 flex flex-col gap-4 hover:shadow-md transition-shadow">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">biotech</span>
+</div>
+<h4 class="font-bold">Business Intelligence</h4>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-100 dark:border-slate-800 flex flex-col gap-4 hover:shadow-md transition-shadow">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">shopping_cart</span>
+</div>
+<h4 class="font-bold">Compras</h4>
+</div>
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-100 dark:border-slate-800 flex flex-col gap-4 hover:shadow-md transition-shadow">
+<div class="size-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">shield_person</span>
+</div>
+<h4 class="font-bold">Compliance</h4>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Cards -->
+<section class="py-20 bg-primary/5" id="precos">
+<div class="max-w-7xl mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold mb-4">Planos que cabem no seu bolso</h2>
+<p class="text-slate-600 dark:text-slate-400">Escolha o plano ideal para o momento da sua empresa</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Iniciante -->
+<div class="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 flex flex-col">
+<h3 class="text-xl font-bold mb-2">Iniciante</h3>
+<p class="text-slate-500 text-sm mb-6">Para pequenos negócios em crescimento</p>
+<div class="mb-8">
+<span class="text-4xl font-bold">R$ 99</span><span class="text-slate-500">/mês</span>
+</div>
+<ul class="flex flex-col gap-4 mb-10 flex-1">
+<li class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Até 5 usuários</li>
+<li class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Gestão Financeira básica</li>
+<li class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Emissão de NF-e</li>
+<li class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Suporte via email</li>
+</ul>
+<button class="w-full border-2 border-primary text-primary font-bold py-3 rounded-xl hover:bg-primary/5 transition-colors">Selecionar Plano</button>
+</div>
+<!-- Profissional -->
+<div class="bg-white dark:bg-slate-900 p-8 rounded-2xl border-2 border-primary shadow-xl flex flex-col relative">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Mais Popular</div>
+<h3 class="text-xl font-bold mb-2">Profissional</h3>
+<p class="text-slate-500 text-sm mb-6">Ideal para empresas estruturadas</p>
+<div class="mb-8">
+<span class="text-4xl font-bold">R$ 249</span><span class="text-slate-500">/mês</span>
+</div>
+<ul class="flex flex-col gap-4 mb-10 flex-1">
+<li class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Usuários ilimitados</li>
+<li class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Todos os módulos padrão</li>
+<li class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Dashboard BI</li>
+<li class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Suporte Prioritário</li>
+</ul>
+<button class="w-full bg-primary text-white font-bold py-3 rounded-xl hover:opacity-95 transition-opacity">Selecionar Plano</button>
+</div>
+<!-- Empresarial -->
+<div class="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 flex flex-col">
+<h3 class="text-xl font-bold mb-2">Empresarial</h3>
+<p class="text-slate-500 text-sm mb-6">Soluções personalizadas para grandes escalas</p>
+<div class="mb-8">
+<span class="text-4xl font-bold">Sob consulta</span>
+</div>
+<ul class="flex flex-col gap-4 mb-10 flex-1">
+<li class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Customização de módulos</li>
+<li class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-primary text-base">check_circle</span> API de integração robusta</li>
+<li class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Gerente de conta exclusivo</li>
+<li class="flex items-center gap-2 text-sm"><span class="material-symbols-outlined text-primary text-base">check_circle</span> Treinamento in-company</li>
+</ul>
+<button class="w-full border-2 border-primary text-primary font-bold py-3 rounded-xl hover:bg-primary/5 transition-colors">Falar com Consultor</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-20">
+<div class="max-w-7xl mx-auto px-4">
+<h2 class="text-3xl font-bold text-center mb-16">O que nossos clientes dizem</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-100 dark:border-slate-800 italic text-slate-700 dark:text-slate-300 relative">
+<span class="material-symbols-outlined text-primary/20 text-6xl absolute top-4 right-8">format_quote</span>
+                    "A UNIQ Empresas transformou nossa gestão financeira. O que antes levava dias agora resolvemos em minutos com os módulos automatizados."
+                    <div class="mt-6 flex items-center gap-4 not-italic">
+<div class="size-12 rounded-full bg-slate-200" data-alt="Portrait of a female executive" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCGd4HqxCFqBaS0KT2pq_c6RXwfG4r4iVDKrHJ-37wOKpEqrxPa6CzAIa1TREDQmKjDySiLjrYc4dtgz9gO2RxLbjfLXYG-ZScA6hRYP9wETzvZi7kqMZTYl-plCHRBAkAc-v3wkXF6SxW_H4CZv1saEHRMeJQJsQB6xtdJCjQUDchvClGUkunWFw333omPN8L1QjnoL5YeWtSsZTZp7C6sN9YRzP-46hAFxs1hcPyqV0phksT8GouCzzGAz8VcHtEOYwoCDvHeIsSD"); background-size: cover;'></div>
+<div>
+<p class="font-bold text-slate-900 dark:text-slate-100">Ana Souza</p>
+<p class="text-xs text-slate-500">Diretora na TechFlow</p>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-100 dark:border-slate-800 italic text-slate-700 dark:text-slate-300 relative">
+<span class="material-symbols-outlined text-primary/20 text-6xl absolute top-4 right-8">format_quote</span>
+                    "A integração entre o CRM e o estoque é o grande diferencial. Nossos vendedores têm autonomia e informações precisas em tempo real."
+                    <div class="mt-6 flex items-center gap-4 not-italic">
+<div class="size-12 rounded-full bg-slate-200" data-alt="Portrait of a male entrepreneur" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA0bBKG2KTIY6NcqnnSeRgBifJG9dNENa7xzTbKrqXZHj8euYa-g3aAcI8l-hHgbx0vZBP2bW9gY1l0DZWLi5Yv38qmzqzCOCgNXcNKUEzsWnF4HkRURspqWpx5IiwTRyzFegguyodr_EftESZrUbV2Jj_Z8yn58qrnXuYIVctlNU9mUHxZzOm6HG4-o--jXa7zXVSBgLNeCnY4hX0qiZNHTHHnytqjBw6U9Q_kKfM9FBTcf0ifj0D2miPSys0TCJwKYBbxLpI71w6X"); background-size: cover;'></div>
+<div>
+<p class="font-bold text-slate-900 dark:text-slate-100">Ricardo Mendes</p>
+<p class="text-xs text-slate-500">Fundador da EcoSolar</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-background-dark text-slate-400 py-16 px-4">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-3 mb-6">
+<div class="size-8 bg-primary rounded flex items-center justify-center">
+<img alt="UNIQ Icon" class="w-full h-full object-cover" data-alt="Small UNIQ logo icon white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAm_yc_e7XBB0VMprhb0b82Yxiha0MeiRdy4XDxA5495h0CNa0Yq3vqa9dsZFovexlou2SgTuvbiTE-yh9jy6L--2e8AFh9pvIgMNzjSv8Erc-6pAw81EtVvVKtQRAJnRCPmMxUG2n2egqk9Uq3FwmYzSrNyG-EfXTcyGu6fIrfNGs6ifwGdAhWjiI8NRyQ16yuEntaeJTNpUeQ4MQdzekBXXb73I6UdPjcHogulAoVQRAB1f3NWpTkLtlaDElyOND0RhtjTqPv33uV"/>
+</div>
+<span class="text-xl font-bold tracking-tight text-white">UNIQ Empresas</span>
+</div>
+<p class="text-sm leading-relaxed">Simplificando a gestão empresarial com inteligência e tecnologia de ponta.</p>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Plataforma</h4>
+<ul class="flex flex-col gap-4 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Funcionalidades</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Integrações</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Segurança</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">API</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Empresa</h4>
+<ul class="flex flex-col gap-4 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Sobre Nós</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Carreiras</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Blog</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contato</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-6">Legal</h4>
+<ul class="flex flex-col gap-4 text-sm">
+<li><a class="hover:text-primary transition-colors" href="#">Termos de Uso</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Privacidade</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Cookies</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto border-t border-slate-800 mt-16 pt-8 text-center text-xs">
+<p>© 2024 UNIQ Empresas. Todos os direitos reservados.</p>
+</div>
+</footer>
+</body></html>

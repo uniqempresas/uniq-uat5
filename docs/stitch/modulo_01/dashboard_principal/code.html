@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#3e5653",
+              "background-light": "#f7f7f7",
+              "background-dark": "#171b1a",
+            },
+            fontFamily: {
+              "display": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<title>UNIQ Empresas - Dashboard</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen pb-20">
+<!-- Mobile Header -->
+<header class="sticky top-0 z-50 bg-white dark:bg-background-dark border-b border-primary/10 px-4 h-16 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<button class="p-2 text-primary hover:bg-primary/10 rounded-lg">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="text-lg font-bold tracking-tight text-primary">UNIQ Empresas</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 text-slate-600 dark:text-slate-400 hover:bg-primary/10 rounded-lg relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border-2 border-white dark:border-background-dark"></span>
+</button>
+<div class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden border border-primary/30">
+<img class="w-full h-full object-cover" data-alt="Profile picture of the administrator" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB19hIWDb82mjj0kcRFNMobcYXQUUfHJ_abjNjM11IQZb6D94nMxr0Jiyf2peKD-k1gabutDRafla9BEbfqF9MiZuqZ7kTQPIiFxj-pEYc2NgfnDXjrJTSqL63WUmMHFNMw5MIQrAzueq7Uai1Z1l6nOUg8jKi6kUsPGp_O9w34_PBJUapOpj7kXfxFiKUvV27RCw2hTD0Jf33VJ42LFxX1FMQeKGb9lEKGJu4vEKkPa1fTjcTVumIJplSVho2fwfnGD6Qi1ql0ynsQ"/>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto p-4 space-y-6">
+<!-- Welcome Section -->
+<section class="flex items-center gap-4 py-2">
+<div class="bg-primary/10 p-4 rounded-xl">
+<span class="material-symbols-outlined text-primary text-3xl">waving_hand</span>
+</div>
+<div>
+<h2 class="text-xl font-bold">Olá, Administrador</h2>
+<p class="text-sm text-slate-500 dark:text-slate-400">Bem-vindo ao seu painel de controle hoje.</p>
+</div>
+</section>
+<!-- Metric Cards Grid -->
+<section class="grid grid-cols-2 md:grid-cols-4 gap-3">
+<div class="bg-white dark:bg-slate-900/50 p-4 rounded-xl border border-primary/5 shadow-sm">
+<span class="material-symbols-outlined text-primary mb-2">trending_up</span>
+<p class="text-xs text-slate-500 uppercase font-semibold">Vendas do Mês</p>
+<p class="text-lg font-bold">R$ 45.200</p>
+</div>
+<div class="bg-white dark:bg-slate-900/50 p-4 rounded-xl border border-primary/5 shadow-sm">
+<span class="material-symbols-outlined text-primary mb-2">shopping_cart</span>
+<p class="text-xs text-slate-500 uppercase font-semibold">Pedidos Hoje</p>
+<p class="text-lg font-bold">12 novos</p>
+</div>
+<div class="bg-white dark:bg-slate-900/50 p-4 rounded-xl border border-primary/5 shadow-sm">
+<span class="material-symbols-outlined text-primary mb-2">group</span>
+<p class="text-xs text-slate-500 uppercase font-semibold">Clientes Ativos</p>
+<p class="text-lg font-bold">1.240</p>
+</div>
+<div class="bg-white dark:bg-slate-900/50 p-4 rounded-xl border border-primary/5 shadow-sm">
+<span class="material-symbols-outlined text-red-500 mb-2">warning</span>
+<p class="text-xs text-slate-500 uppercase font-semibold">Estoque Crítico</p>
+<p class="text-lg font-bold text-red-500">8 itens</p>
+</div>
+</section>
+<!-- Quick Actions Row -->
+<section class="flex gap-2 overflow-x-auto pb-2 no-scrollbar">
+<button class="whitespace-nowrap bg-primary text-white px-4 py-2 rounded-lg flex items-center gap-2 text-sm font-medium">
+<span class="material-symbols-outlined text-sm">add</span> Novo Pedido
+            </button>
+<button class="whitespace-nowrap bg-white dark:bg-slate-800 border border-primary/20 px-4 py-2 rounded-lg flex items-center gap-2 text-sm font-medium">
+<span class="material-symbols-outlined text-sm">inventory</span> Gerir Estoque
+            </button>
+<button class="whitespace-nowrap bg-white dark:bg-slate-800 border border-primary/20 px-4 py-2 rounded-lg flex items-center gap-2 text-sm font-medium">
+<span class="material-symbols-outlined text-sm">summarize</span> Relatórios
+            </button>
+</section>
+<!-- MEL Assistente Card -->
+<section class="bg-gradient-to-r from-primary/90 to-primary text-white p-5 rounded-2xl flex items-center gap-4 relative overflow-hidden">
+<div class="flex-1 z-10">
+<h3 class="font-bold text-lg">MEL - Sua Assistente</h3>
+<p class="text-sm text-white/80 mb-3">Você tem 3 novos insights sobre as vendas de hoje. Vamos analisar?</p>
+<button class="bg-white text-primary px-4 py-1.5 rounded-full text-sm font-bold">Ver Insights</button>
+</div>
+<div class="w-24 h-24 flex-shrink-0 bg-white/20 rounded-full flex items-center justify-center p-1">
+<img class="w-full h-full object-cover rounded-full" data-alt="Portrait of MEL, a virtual professional assistant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB53lUclesZSdOtn0E4KOeL_EujDiJetVLYHmgIcpovDXb-2W71p7uqCZKUfQFk-4p1XRD-Vw4PMB8vdqWcGsBPrvGp6d5ecFxKOXdqo69wa6nON9TxAxPOvjAJYYDJud4SD6gtOqy34qNETx6RyMWcZyEj_x5lIGT1KPH6els1ZikSn70kiBSv8WSdZnA2TU4C15mPxJfimCYimlPyhxaR582KCp16qY4iyFjQPcSfYvOXGz3byBikt6jIE6J_pe0UCCnVrguvGD16"/>
+</div>
+</section>
+<!-- Recent Sales Table -->
+<section class="bg-white dark:bg-slate-900/50 rounded-xl border border-primary/5 shadow-sm overflow-hidden">
+<div class="p-4 border-b border-primary/5 flex justify-between items-center">
+<h3 class="font-bold">Vendas Recentes</h3>
+<a class="text-primary text-sm font-medium" href="#">Ver todas</a>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left text-sm">
+<thead class="bg-primary/5 text-slate-600 dark:text-slate-400">
+<tr>
+<th class="p-4 font-semibold">Pedido</th>
+<th class="p-4 font-semibold">Cliente</th>
+<th class="p-4 font-semibold">Valor</th>
+<th class="p-4 font-semibold text-right">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-primary/5">
+<tr>
+<td class="p-4 font-medium">#8942</td>
+<td class="p-4">Carlos Mendes</td>
+<td class="p-4 font-semibold">R$ 1.250,00</td>
+<td class="p-4 text-right">
+<span class="bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 px-2 py-1 rounded text-xs font-bold uppercase">Pago</span>
+</td>
+</tr>
+<tr>
+<td class="p-4 font-medium">#8941</td>
+<td class="p-4">Ana Paula Silva</td>
+<td class="p-4 font-semibold">R$ 450,00</td>
+<td class="p-4 text-right">
+<span class="bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400 px-2 py-1 rounded text-xs font-bold uppercase">Pendente</span>
+</td>
+</tr>
+<tr>
+<td class="p-4 font-medium">#8940</td>
+<td class="p-4">Marcos Oliveira</td>
+<td class="p-4 font-semibold">R$ 3.820,00</td>
+<td class="p-4 text-right">
+<span class="bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 px-2 py-1 rounded text-xs font-bold uppercase">Pago</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</main>
+<!-- Floating Action Button -->
+<button class="fixed bottom-24 right-6 w-14 h-14 bg-primary text-white rounded-full shadow-lg flex items-center justify-center hover:scale-105 transition-transform z-40">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-white dark:bg-background-dark border-t border-primary/10 px-4 py-2 flex justify-between items-center z-50">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined fill-1">dashboard</span>
+<span class="text-[10px] font-bold uppercase">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="text-[10px] font-bold uppercase">Vendas</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">inventory_2</span>
+<span class="text-[10px] font-bold uppercase">Produtos</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-bold uppercase">Ajustes</span>
+</a>
+</nav>
+</body></html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3e5653",
+                        "background-light": "#f7f7f7",
+                        "background-dark": "#171b1a",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>Dashboard - Dropdown de Perfil</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<!-- Header / Top Bar -->
+<header class="bg-white dark:bg-background-dark border-b border-primary/10 px-4 h-16 flex items-center justify-between sticky top-0 z-40">
+<div class="flex items-center gap-4">
+<div class="text-primary flex size-10 items-center justify-center">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</div>
+<h1 class="text-lg font-bold tracking-tight">Dashboard</h1>
+</div>
+<!-- User Avatar & Dropdown Trigger Area -->
+<div class="relative flex items-center gap-3">
+<div class="hidden md:flex flex-col items-end mr-2">
+<span class="text-sm font-semibold">Ana Silva</span>
+<span class="text-xs text-slate-500">Administrador</span>
+</div>
+<button class="relative size-10 rounded-full bg-primary/20 flex items-center justify-center overflow-hidden border-2 border-primary/10">
+<img alt="Avatar do usuário" class="w-full h-full object-cover" data-alt="Retrato de uma mulher sorrindo profissional" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBusZj1pXBScZlEH5sMxYEG2R0rsAf__civ6_mFpICG2zJAJzbxT1t3_g_NwnzGOe2v30Sc4BYg25JTuqvCHKxxAElyBHsXmgfmvfzf_L9FUEyAQfaZWkiPkIct7o6DUp3g8N4BXDEytOEDsEC8vjmUzbmFkU0MocXq4yYDYpsuq3m25_RN55fJPEx1qAlggyhiHyS3f1lXcKwaRy8MxdU7ajnDSjV7NCcejM4q2VdHJXQ_54Eq000ovg6T9uJ8o9dzbm4SIqYkG1Ok"/>
+</button>
+<!-- PROFILE DROPDOWN MENU -->
+<div class="absolute right-0 top-full mt-2 w-64 bg-white dark:bg-background-dark rounded-xl shadow-2xl border border-primary/10 py-2 z-50">
+<!-- User Info Header (Mobile/Detail View) -->
+<div class="px-4 py-3 border-b border-primary/5 mb-1">
+<p class="text-sm font-bold text-slate-900 dark:text-slate-100">Ana Silva</p>
+<p class="text-xs text-slate-500 truncate">ana.silva@empresa.com.br</p>
+</div>
+<!-- Menu Items -->
+<a class="flex items-center gap-3 px-4 py-2.5 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/5 transition-colors" href="#">
+<span class="material-symbols-outlined text-primary text-[20px]">person</span>
+<span class="flex-1">Meu Perfil</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2.5 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/5 transition-colors" href="#">
+<span class="material-symbols-outlined text-primary text-[20px]">domain</span>
+<span class="flex-1">Configurações da Empresa</span>
+</a>
+<div class="flex items-center justify-between px-4 py-2.5 text-sm text-slate-700 dark:text-slate-300 hover:bg-primary/5 cursor-pointer transition-colors">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[20px]">dark_mode</span>
+<span>Tema</span>
+</div>
+<div class="flex items-center gap-1 text-xs text-slate-400">
+<span>Escuro</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</div>
+</div>
+<div class="h-px bg-primary/5 my-1"></div>
+<a class="flex items-center gap-3 px-4 py-2.5 text-sm text-red-600 hover:bg-red-50 transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]">logout</span>
+<span class="font-medium">Sair</span>
+</a>
+</div>
+</div>
+</header>
+<!-- Main Content Placeholder -->
+<main class="p-6 max-w-7xl mx-auto space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-white dark:bg-background-dark p-6 rounded-xl border border-primary/10 shadow-sm">
+<p class="text-sm text-slate-500 font-medium">Projetos Ativos</p>
+<h3 class="text-3xl font-bold mt-1">12</h3>
+<div class="mt-4 flex items-center text-emerald-600 text-sm">
+<span class="material-symbols-outlined text-sm mr-1">trending_up</span>
+<span>+2 este mês</span>
+</div>
+</div>
+<div class="bg-white dark:bg-background-dark p-6 rounded-xl border border-primary/10 shadow-sm">
+<p class="text-sm text-slate-500 font-medium">Tarefas Pendentes</p>
+<h3 class="text-3xl font-bold mt-1">48</h3>
+<div class="mt-4 flex items-center text-slate-400 text-sm">
+<span class="material-symbols-outlined text-sm mr-1">schedule</span>
+<span>Prazo médio: 3 dias</span>
+</div>
+</div>
+<div class="bg-white dark:bg-background-dark p-6 rounded-xl border border-primary/10 shadow-sm">
+<p class="text-sm text-slate-500 font-medium">Horas Registradas</p>
+<h3 class="text-3xl font-bold mt-1">164h</h3>
+<div class="mt-4 flex items-center text-primary text-sm">
+<span class="material-symbols-outlined text-sm mr-1">analytics</span>
+<span>82% da meta mensal</span>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-background-dark rounded-xl border border-primary/10 shadow-sm overflow-hidden">
+<div class="px-6 py-4 border-b border-primary/5 flex items-center justify-between">
+<h2 class="font-bold text-lg">Atividades Recentes</h2>
+<button class="text-sm text-primary font-medium hover:underline">Ver tudo</button>
+</div>
+<div class="divide-y divide-primary/5">
+<div class="px-6 py-4 flex items-center gap-4">
+<div class="size-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">description</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-medium">Relatório trimestral atualizado</p>
+<p class="text-xs text-slate-500">Há 2 horas • Por João Souza</p>
+</div>
+</div>
+<div class="px-6 py-4 flex items-center gap-4">
+<div class="size-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">add_task</span>
+</div>
+<div class="flex-1">
+<p class="text-sm font-medium">Nova tarefa atribuída a você</p>
+<p class="text-xs text-slate-500">Há 5 horas • Design de Interface</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation (Mobile Only Pattern) -->
+<nav class="fixed bottom-0 left-0 right-0 md:hidden bg-white dark:bg-background-dark border-t border-primary/10 px-4 py-2 flex justify-around items-center z-40">
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="text-[10px] font-medium">Início</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">view_kanban</span>
+<span class="text-[10px] font-medium">Projetos</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">bar_chart</span>
+<span class="text-[10px] font-medium">Relatórios</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-medium">Ajustes</span>
+</a>
+</nav>
+</body></html>

@@ -1,0 +1,20 @@
+// Chat Components Index
+export { ConversationsList } from './ConversationsList';
+export { ConversationItem } from './ConversationItem';
+export { ConversationHeader } from './ConversationHeader';
+export { MessageBubble } from './MessageBubble';
+export { QuickReplies } from './QuickReplies';
+export { TypingIndicator } from './TypingIndicator';
+export { MessageInput } from './MessageInput';
+export { ProductCard } from './ProductCard';
+export { AppointmentCard } from './AppointmentCard';
+export { DateSeparator } from './DateSeparator';
+export { SystemMessage } from './SystemMessage';
+export { ChatFilters } from './ChatFilters';
+export { ChatSearch } from './ChatSearch';
+export { MELBadge } from './MELBadge';
+export { StatsCards } from './StatsCards';
+export { AutoMessageEditor } from './AutoMessageEditor';
+export { FAQEditor } from './FAQEditor';
+export { KeywordManager } from './KeywordManager';
+export { BehaviorSettings } from './BehaviorSettings';

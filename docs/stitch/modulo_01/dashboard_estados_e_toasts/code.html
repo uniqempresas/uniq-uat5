@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3e5653",
+                        "background-light": "#f7f7f7",
+                        "background-dark": "#171b1a",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<title>Dashboard - Estado Vazio e Sucesso</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<!-- Main Container -->
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Success Toast (Notification) -->
+<div class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-full max-w-sm px-4">
+<div class="flex items-center gap-3 bg-primary text-white p-4 rounded-xl shadow-lg border border-primary/20">
+<span class="material-symbols-outlined text-white">check_circle</span>
+<p class="text-sm font-medium">Alterações salvas com sucesso!</p>
+<button class="ml-auto opacity-70 hover:opacity-100">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+</div>
+<!-- Header Navigation -->
+<header class="flex items-center bg-white dark:bg-background-dark/50 border-b border-primary/10 p-4 justify-between sticky top-0 z-40 backdrop-blur-md">
+<div class="text-primary dark:text-slate-100 flex size-12 shrink-0 items-center justify-center cursor-pointer">
+<span class="material-symbols-outlined text-2xl">menu</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-tight flex-1 px-2">Painel de Controle</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex size-10 items-center justify-center rounded-lg bg-primary/10 text-primary dark:text-slate-100">
+<span class="material-symbols-outlined text-2xl">notifications</span>
+</button>
+</div>
+</header>
+<!-- Summary Statistics -->
+<div class="px-4 pt-6">
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight mb-4">Resumo de Vendas</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="flex flex-col gap-2 rounded-xl p-5 border border-primary/10 bg-white dark:bg-background-dark/30 shadow-sm">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Vendas Hoje</p>
+<p class="text-slate-900 dark:text-white text-2xl font-bold leading-tight">R$ 0,00</p>
+<div class="flex items-center gap-1 text-slate-400 text-xs font-medium">
+<span class="material-symbols-outlined text-xs">horizontal_rule</span>
+<span>0% vs ontem</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-5 border border-primary/10 bg-white dark:bg-background-dark/30 shadow-sm">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Faturamento Mensal</p>
+<p class="text-slate-900 dark:text-white text-2xl font-bold leading-tight">R$ 12.450,00</p>
+<div class="flex items-center gap-1 text-emerald-600 dark:text-emerald-400 text-xs font-medium">
+<span class="material-symbols-outlined text-xs">trending_up</span>
+<span>+12% vs mês anterior</span>
+</div>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-5 border border-primary/10 bg-white dark:bg-background-dark/30 shadow-sm">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Ticket Médio</p>
+<p class="text-slate-900 dark:text-white text-2xl font-bold leading-tight">R$ 85,00</p>
+<div class="flex items-center gap-1 text-rose-600 dark:text-rose-400 text-xs font-medium">
+<span class="material-symbols-outlined text-xs">trending_down</span>
+<span>-2% vs ontem</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Recent Sales - EMPTY STATE -->
+<div class="px-4 py-8 flex-1">
+<div class="flex items-center justify-between mb-4">
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight">Vendas Recentes</h2>
+</div>
+<!-- Empty State Card -->
+<div class="flex flex-col items-center justify-center py-16 px-6 bg-white dark:bg-background-dark/20 rounded-2xl border-2 border-dashed border-primary/10">
+<div class="relative mb-6">
+<div class="size-24 rounded-full bg-primary/5 flex items-center justify-center">
+<span class="material-symbols-outlined text-5xl text-primary/40">shopping_cart_off</span>
+</div>
+<div class="absolute -bottom-1 -right-1 size-8 rounded-full bg-white dark:bg-background-dark flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-primary text-xl">info</span>
+</div>
+</div>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Nenhuma venda encontrada</h3>
+<p class="text-slate-500 dark:text-slate-400 text-center max-w-xs mb-8">
+                    Parece que você ainda não realizou vendas hoje. Comece a vender para ver os relatórios aqui.
+                </p>
+<button class="flex items-center gap-2 bg-primary hover:bg-primary/90 text-white font-bold py-3 px-8 rounded-xl transition-all shadow-md">
+<span class="material-symbols-outlined">add</span>
+                    Nova Venda
+                </button>
+</div>
+</div>
+<!-- Bottom Navigation Spacer -->
+<div class="h-20"></div>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 w-full flex border-t border-primary/10 bg-white dark:bg-background-dark px-4 pb-4 pt-2 z-50">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">home</span>
+<p class="text-xs font-semibold leading-normal tracking-wide">Início</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined text-[24px]">trending_up</span>
+<p class="text-xs font-medium leading-normal tracking-wide">Vendas</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined text-[24px]">description</span>
+<p class="text-xs font-medium leading-normal tracking-wide">Relatórios</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined text-[24px]">settings</span>
+<p class="text-xs font-medium leading-normal tracking-wide">Ajustes</p>
+</a>
+</nav>
+</div>
+</body></html>

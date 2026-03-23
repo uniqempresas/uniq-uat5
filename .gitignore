@@ -1,0 +1,25 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# NotebookLM
+exports/
+*.mp3
+*.mp4
+*.pdf
+*.pptx
+*.png
+.ipynb_checkpoints/
+.notebooklm/
+
+# Credentials (nunca commit!)
+.env
+*.credentials
+*credentials*

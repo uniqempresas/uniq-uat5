@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3e5653",
+                        "background-light": "#f7f7f7",
+                        "background-dark": "#171b1a",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased">
+<div class="flex min-h-screen flex-col lg:flex-row">
+<!-- Left Side: Branding / Image Section (Split Screen Style) -->
+<div class="hidden lg:flex lg:w-1/2 bg-primary items-center justify-center p-12">
+<div class="max-w-md text-center">
+<div class="mb-8 flex justify-center">
+<!-- Placeholder for IMAGE_10 - Branding/Logo -->
+<img alt="UNIQ Empresas logo showing professional branding" class="h-20 w-auto" data-alt="UNIQ Empresas logo with professional typography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyTFt4zrYhv-pxw78HiljZtVxZze00Wuvkl1xtlJcLFym4ga9WNkgwnxXdryDsBzB8-nlnXZbAwdtWBBmV88X4HIuAgpBNkp6flDpJ5m1FXP--xBq6ZE8mY_fSLKFyCOlv6HQN07MgPa6lPyJowix-c8DWxvcm5Nc5VFHDtZaNdcyGS9qwokPjXa1eujq1bi1KSMRKkTNLr6sDUNfh1qN0EBLWf3bMp2JFcWkZoG2DiREaCaAw0OqUnwh2S4rY3ZwWff8YXw7zibIA"/>
+</div>
+<div class="aspect-video w-full rounded-xl overflow-hidden shadow-2xl">
+<div class="w-full h-full bg-cover bg-center" data-alt="Modern office space with team working together" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBdWBrJz0EnTNLuW_-Rg5N74YOcB2w0wzTPPYlDvx7NHUP503g4n9bCXANKOA-pPr4pgWVrtQ1xp5gD20gOx6Gjah_MotBUiIMr_eOPCkzB9eY78cVXsZesTrAjYQRjzQP6Y3Bg1JvCVr3f9VMd_fGxsSSDBbEEJGOk-i99Z8bMYS9On6WHDZlLBCHDXLCWckufiEabZ_Cmj6GPClnHp3tQobaKtFQnukopkAp2_LcEWNlIi983v8bLH3wlQ6TeIrqqRUg4fEAyNdOk')"></div>
+</div>
+<h2 class="mt-8 text-3xl font-bold text-white">Soluções inteligentes para sua empresa.</h2>
+<p class="mt-4 text-white/80 text-lg">Gerencie seus processos de forma simples e eficiente com a UNIQ.</p>
+</div>
+</div>
+<!-- Right Side: Reset Password Form Section -->
+<div class="flex flex-1 flex-col justify-center px-6 py-12 lg:px-24 bg-background-light dark:bg-background-dark">
+<div class="sm:mx-auto sm:w-full sm:max-w-md">
+<!-- Mobile Logo -->
+<div class="flex lg:hidden mb-8 justify-center">
+<img alt="UNIQ Empresas logo for mobile view" class="h-12 w-auto" data-alt="UNIQ Empresas minimal logo for mobile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDebnX3m33s_blte1bTaMvxBMMx3arI63UqmIut0yq4E9CBCe8TJKleuN7WnT1pZzYwdDChah8mjMT1mpGQKYp-2SG9YI-7YuDDIpFlvP206obGWhAWItHr3WtBW7u2PLShwCOLjb2Y-6x_5EfcZfkvaC5-caDgywp-Y6uRE0n5fYDryFihuhFwWEKUDbehW2ldiowIrQrDZiU8IRT--rHxzyiUh49sAB7trD8YZ5k2VgjaY3Afc9q29EIMxpONFeQdmFt70Pxy8kmS"/>
+</div>
+<div class="flex items-center gap-2 mb-6">
+<a class="text-primary hover:text-primary/80 transition-colors flex items-center" href="#">
+<span class="material-symbols-outlined">arrow_back</span>
+</a>
+</div>
+<h1 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Recuperar Senha</h1>
+<p class="mt-3 text-base text-slate-600 dark:text-slate-400">
+                    Informe seu email e enviaremos as instruções para redefinir sua senha.
+                </p>
+</div>
+<div class="mt-10 sm:mx-auto sm:w-full sm:max-w-md">
+<form action="#" class="space-y-6" method="POST">
+<div>
+<label class="block text-sm font-medium leading-6 text-slate-900 dark:text-slate-100" for="email">E-mail corporativo</label>
+<div class="mt-2 relative">
+<div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+<span class="material-symbols-outlined text-slate-400">mail</span>
+</div>
+<input autocomplete="email" class="block w-full rounded-lg border-0 py-3.5 pl-10 text-slate-900 shadow-sm ring-1 ring-inset ring-slate-300 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 dark:bg-background-dark dark:text-slate-100 dark:ring-slate-700" id="email" name="email" placeholder="exemplo@empresa.com.br" required="" type="email"/>
+</div>
+</div>
+<div>
+<button class="flex w-full justify-center rounded-lg bg-primary px-3 py-3.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-all" type="submit">
+                            Enviar Link de Recuperação
+                        </button>
+</div>
+</form>
+<p class="mt-10 text-center text-sm text-slate-600 dark:text-slate-400">
+                    Lembrou sua senha?
+                    <a class="font-semibold leading-6 text-primary hover:text-primary/80 transition-colors" href="#">
+                        Voltar para o Login
+                    </a>
+</p>
+</div>
+<!-- Footer Branding (Optional) -->
+<div class="mt-auto pt-10 text-center lg:text-left">
+<p class="text-xs text-slate-400 dark:text-slate-500">
+                    © 2024 UNIQ Empresas. Todos os direitos reservados.
+                </p>
+</div>
+</div>
+</div>
+</body></html>

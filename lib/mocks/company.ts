@@ -1,0 +1,53 @@
+// lib/mocks/company.ts
+
+export const mockCompany = {
+  name: "Tech Solutions Ltda",
+  cnpj: "12.345.678/0001-90",
+  email: "contato@techsolutions.com.br",
+  phone: "(11) 99999-9999",
+  logo: null as string | null,
+  address: {
+    cep: "01234-567",
+    street: "Rua das Flores",
+    number: "123",
+    complement: "Sala 45",
+    neighborhood: "Centro",
+    city: "São Paulo",
+    state: "SP",
+  },
+  colors: {
+    primary: "#3e5653",
+    secondary: "#1f2937",
+    accent: "#86cb92",
+  },
+};
+
+export const brazilianStates = [
+  { value: "AC", label: "Acre" },
+  { value: "AL", label: "Alagoas" },
+  { value: "AP", label: "Amapá" },
+  { value: "AM", label: "Amazonas" },
+  { value: "BA", label: "Bahia" },
+  { value: "CE", label: "Ceará" },
+  { value: "DF", label: "Distrito Federal" },
+  { value: "ES", label: "Espírito Santo" },
+  { value: "GO", label: "Goiás" },
+  { value: "MA", label: "Maranhão" },
+  { value: "MT", label: "Mato Grosso" },
+  { value: "MS", label: "Mato Grosso do Sul" },
+  { value: "MG", label: "Minas Gerais" },
+  { value: "PA", label: "Pará" },
+  { value: "PB", label: "Paraíba" },
+  { value: "PR", label: "Paraná" },
+  { value: "PE", label: "Pernambuco" },
+  { value: "PI", label: "Piauí" },
+  { value: "RJ", label: "Rio de Janeiro" },
+  { value: "RN", label: "Rio Grande do Norte" },
+  { value: "RS", label: "Rio Grande do Sul" },
+  { value: "RO", label: "Rondônia" },
+  { value: "RR", label: "Roraima" },
+  { value: "SC", label: "Santa Catarina" },
+  { value: "SP", label: "São Paulo" },
+  { value: "SE", label: "Sergipe" },
+  { value: "TO", label: "Tocantins" },
+];

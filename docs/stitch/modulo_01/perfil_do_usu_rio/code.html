@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-br"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Perfil do Usuário - UNIQ Empresas</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3e5653",
+                        "background-light": "#f7f7f7",
+                        "background-dark": "#171b1a",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="max-w-4xl mx-auto min-h-screen flex flex-col bg-white dark:bg-zinc-900 shadow-xl">
+<!-- Header -->
+<header class="flex items-center p-4 border-b border-slate-200 dark:border-slate-800 justify-between sticky top-0 bg-white dark:bg-zinc-900 z-10">
+<div class="flex items-center gap-4">
+<button class="text-primary dark:text-slate-100 p-2 hover:bg-primary/10 rounded-full transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold leading-tight tracking-tight">Configurações de Perfil</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="p-2 hover:bg-primary/10 rounded-full text-primary dark:text-slate-100" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-symbols-outlined">dark_mode</span>
+</button>
+<button class="p-2 hover:bg-primary/10 rounded-full text-primary dark:text-slate-100">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</div>
+</header>
+<!-- Profile Hero -->
+<div class="flex p-8 flex-col items-center border-b border-slate-100 dark:border-slate-800">
+<div class="relative group">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-32 w-32 border-4 border-primary/20 shadow-lg" data-alt="Professional headshot of a smiling male executive" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCRVseGnaxuJkl40Ps2hJp829Hn1GaHhsD6pGtL05GT3l6DySURHjtSvirKLcPqnwRHzhoou_0kAkyZ983Fd5HDHGsw42PnOYIRNQbtgHylc6M2mkv6lWaNvsMwz-1dN86wIlB37nKGl9bBxetC_0EXHQURQY1G2IkvmXqLE4NhvCo-JC1z2P11G7oZGIYufNrZOZbXATJwkhxKVqPXXikmleD1aOqBTQLv5B02h4rasip4JshoEhaBX02eRRtR7UH6qeu8yGaPAEAA");'>
+</div>
+<button class="absolute bottom-0 right-0 bg-primary text-white p-2 rounded-full border-2 border-white dark:border-zinc-900 hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-sm">photo_camera</span>
+</button>
+</div>
+<div class="mt-4 text-center">
+<h2 class="text-2xl font-bold tracking-tight">Ricardo Almeida</h2>
+<p class="text-primary font-medium opacity-80 dark:text-slate-400">Diretor de Operações | UNIQ Logística</p>
+</div>
+</div>
+<!-- Navigation Tabs -->
+<nav class="flex overflow-x-auto border-b border-slate-200 dark:border-slate-800 px-4 no-scrollbar">
+<a class="flex flex-col items-center justify-center border-b-2 border-primary text-primary px-6 py-4 flex-none" href="#">
+<span class="text-sm font-bold tracking-wide">Dados Pessoais</span>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-slate-500 hover:text-primary px-6 py-4 flex-none transition-colors" href="#">
+<span class="text-sm font-bold tracking-wide">Empresa</span>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-slate-500 hover:text-primary px-6 py-4 flex-none transition-colors" href="#">
+<span class="text-sm font-bold tracking-wide">Preferências</span>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-slate-500 hover:text-primary px-6 py-4 flex-none transition-colors" href="#">
+<span class="text-sm font-bold tracking-wide">Segurança</span>
+</a>
+</nav>
+<!-- Form Content -->
+<main class="flex-1 p-6 space-y-8">
+<!-- User Data Section -->
+<section>
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary">person</span>
+<h3 class="text-lg font-bold tracking-tight">Informações do Usuário</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-semibold text-slate-600 dark:text-slate-400">Nome Completo</label>
+<input class="rounded-lg border-slate-300 dark:border-slate-700 dark:bg-zinc-800 focus:ring-primary focus:border-primary transition-all" type="text" value="Ricardo Almeida"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-semibold text-slate-600 dark:text-slate-400">E-mail Corporativo</label>
+<input class="rounded-lg border-slate-300 dark:border-slate-700 dark:bg-zinc-800 focus:ring-primary focus:border-primary transition-all" type="email" value="ricardo.almeida@uniq.com.br"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-semibold text-slate-600 dark:text-slate-400">Telefone / WhatsApp</label>
+<input class="rounded-lg border-slate-300 dark:border-slate-700 dark:bg-zinc-800 focus:ring-primary focus:border-primary transition-all" type="tel" value="+55 (11) 98765-4321"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-semibold text-slate-600 dark:text-slate-400">Cargo</label>
+<input class="rounded-lg border-slate-300 dark:border-slate-700 dark:bg-zinc-800 focus:ring-primary focus:border-primary transition-all" type="text" value="Diretor de Operações"/>
+</div>
+</div>
+</section>
+<!-- Company Data Section -->
+<section class="pt-8 border-t border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary">domain</span>
+<h3 class="text-lg font-bold tracking-tight">Dados da Empresa</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-1.5 md:col-span-2">
+<label class="text-sm font-semibold text-slate-600 dark:text-slate-400">Razão Social</label>
+<input class="rounded-lg border-slate-300 dark:border-slate-700 dark:bg-zinc-800 focus:ring-primary focus:border-primary transition-all" type="text" value="UNIQ SOLUCOES EMPRESARIAIS LTDA"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-semibold text-slate-600 dark:text-slate-400">CNPJ</label>
+<input class="rounded-lg border-slate-300 dark:border-slate-700 dark:bg-zinc-800 focus:ring-primary focus:border-primary transition-all" type="text" value="12.345.678/0001-90"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-semibold text-slate-600 dark:text-slate-400">Setor de Atuação</label>
+<select class="rounded-lg border-slate-300 dark:border-slate-700 dark:bg-zinc-800 focus:ring-primary focus:border-primary transition-all">
+<option>Logística e Transporte</option>
+<option>Tecnologia da Informação</option>
+<option>Serviços Financeiros</option>
+<option>Varejo</option>
+</select>
+</div>
+</div>
+</section>
+<!-- Action Button -->
+<div class="pt-10 pb-6 flex justify-end gap-4">
+<button class="px-6 py-3 border border-slate-300 dark:border-slate-700 rounded-lg text-slate-700 dark:text-slate-300 font-bold hover:bg-slate-50 dark:hover:bg-zinc-800 transition-colors">
+                    Descartar
+                </button>
+<button class="px-8 py-3 bg-primary text-white rounded-lg font-bold shadow-lg hover:brightness-110 active:scale-95 transition-all">
+                    Salvar Alterações
+                </button>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<footer class="mt-auto border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-zinc-900 px-4 py-2">
+<div class="flex justify-around items-center max-w-md mx-auto">
+<a class="flex flex-col items-center gap-1 p-2 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium uppercase tracking-wider">Início</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">work</span>
+<span class="text-[10px] font-medium uppercase tracking-wider">Projetos</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">bar_chart</span>
+<span class="text-[10px] font-medium uppercase tracking-wider">Relatórios</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-primary" href="#">
+<span class="material-symbols-outlined fill-1">account_circle</span>
+<span class="text-[10px] font-bold uppercase tracking-wider">Perfil</span>
+</a>
+</div>
+</footer>
+</div>
+</body></html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3e5653",
+                        "background-light": "#f7f7f7",
+                        "background-dark": "#171b1a",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<!-- Dashboard Background Blur (Simulated) -->
+<div class="fixed inset-0 z-0 flex flex-col overflow-hidden filter blur-sm grayscale-[0.2]">
+<nav class="flex items-center justify-between p-4 bg-white dark:bg-slate-900 border-b border-primary/10">
+<img alt="UNIQ Empresas Logo" class="h-8 w-auto" data-alt="Logotipo UNIQ Empresas minimalista e moderno" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8_nNfpB88S-MpKAqTcuEA2yfFQLZnL_AvoqWly3T06ISmk61saJL4mEQDWMRfQg6xBxclzwl_N7WoGj_l3HmeAH6DZYdOwyBgyT2RHp1VEDVrDvZ1gE7t8SUCHl_hlkuZ_llG5MzgsrvUl6u7O_FiaDD_hM7uzuxaH_YZ5smWKa_ZKN47y7qbFFIWSg59cS7DUyB2H6Wssw13k9_zXAwQADS0Fv0h-zg-lVXmIL-Tjvyl8rEc4WsHoqCNF-8ilxzEV2IoUE353lye"/>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-primary/10"></div>
+<div class="w-10 h-10 rounded-full bg-primary/10"></div>
+</div>
+</nav>
+<div class="p-8 grid grid-cols-3 gap-6">
+<div class="h-32 bg-white dark:bg-slate-800 rounded-xl shadow-sm"></div>
+<div class="h-32 bg-white dark:bg-slate-800 rounded-xl shadow-sm"></div>
+<div class="h-32 bg-white dark:bg-slate-800 rounded-xl shadow-sm"></div>
+<div class="col-span-2 h-64 bg-white dark:bg-slate-800 rounded-xl shadow-sm"></div>
+<div class="h-64 bg-white dark:bg-slate-800 rounded-xl shadow-sm"></div>
+</div>
+</div>
+<!-- Global Search Modal Overlay -->
+<div class="fixed inset-0 bg-primary/40 backdrop-blur-md z-50 flex items-start justify-center pt-[10vh] sm:pt-[20vh] px-4">
+<!-- Modal Container -->
+<div class="w-full max-w-2xl bg-white dark:bg-background-dark rounded-xl shadow-2xl overflow-hidden flex flex-col animate-in fade-in zoom-in duration-300">
+<!-- Search Header -->
+<div class="flex flex-col border-b border-primary/10">
+<div class="flex items-center p-4 gap-4">
+<div class="text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl">search</span>
+</div>
+<input autofocus="" class="flex-1 border-none focus:ring-0 text-xl text-slate-900 dark:text-slate-100 placeholder:text-slate-400 bg-transparent py-2 font-medium" placeholder="Buscar produtos, clientes ou pedidos..." type="text" value="Smar"/>
+<button class="text-slate-400 hover:text-primary transition-colors p-1 rounded-lg hover:bg-primary/5">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<!-- Quick Filters -->
+<div class="flex gap-2 px-4 pb-4">
+<span class="px-3 py-1 bg-primary text-white text-xs font-semibold rounded-full cursor-pointer">Tudo</span>
+<span class="px-3 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full hover:bg-primary/20 cursor-pointer">Produtos</span>
+<span class="px-3 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full hover:bg-primary/20 cursor-pointer">Clientes</span>
+<span class="px-3 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full hover:bg-primary/20 cursor-pointer">Pedidos</span>
+</div>
+</div>
+<!-- Search Results Content -->
+<div class="max-h-[60vh] overflow-y-auto custom-scrollbar">
+<!-- Category: Produtos -->
+<div class="py-2">
+<h3 class="text-primary/60 text-xs font-bold uppercase tracking-wider px-6 py-3">Produtos</h3>
+<div class="flex items-center gap-4 hover:bg-primary/5 px-6 py-3 cursor-pointer group transition-colors">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-12 border border-primary/10" data-alt="Smartphone moderno com tela infinita" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC_1tl1tc8q9Q4P4CSzPaIut79NuuUGgdRxg6b6cUwalv9X1hOsyKWYMbuJA7Mgi3fr_BZEjhasko3OA0qYxbR5d9-RWuAhw_pTCYsTsmze1i3Ip3knBvrLr9GEjuHD5d_WjQ8ouX1E28WYdDmAmb2oJ0LtGgVniscSiUzenRPLYFkpnOOhDdT23itu9LqNB9jgzDmqwztQWjT9R5uLlzVchnryqkVIhdIc4_QoV4pyhA1Wb3NGwTuR4skq9QCE2C8XGqn4rh5Md3d0");'></div>
+<div class="flex flex-col justify-center flex-1">
+<p class="text-slate-900 dark:text-slate-100 text-sm font-semibold line-clamp-1 group-hover:text-primary transition-colors">
+<span class="text-primary">Smar</span>tphone Galaxy Z Fold
+                            </p>
+<p class="text-slate-500 dark:text-slate-400 text-xs">Estoque: 12 unidades • <span class="font-medium">R$ 8.499,00</span></p>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors">chevron_right</span>
+</div>
+<div class="flex items-center gap-4 hover:bg-primary/5 px-6 py-3 cursor-pointer group transition-colors">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-12 border border-primary/10" data-alt="Smartwatch elegante com pulseira preta" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDUpmlDkusdSHsEgx8e6VUssxWOazuQ47KhfZLjCUYxjYTj-UcVFqxU4dqpxVn8_6X1b7OZkawV5PLAwhPnN4CmByc56GFKsZJFKfftPNmAHLeRQQXmDinXw0FxqB6Ki5GF3PGBJZ5d4ImJ2eIrZI-5-A9nIWYamPSC_JI04lVlO620tkSvFv6LPhNcVG0KqVkR3rnkBZ5s8qVaPbYfs_QkaI1roFPJSxW-32e1o7UWtJi6xW1T_8LqAEBxaSGiPHsbEphCD--gsjgy");'></div>
+<div class="flex flex-col justify-center flex-1">
+<p class="text-slate-900 dark:text-slate-100 text-sm font-semibold line-clamp-1 group-hover:text-primary transition-colors">
+<span class="text-primary">Smar</span>t Watch Serie 9 Pro
+                            </p>
+<p class="text-slate-500 dark:text-slate-400 text-xs">Estoque: 45 unidades • <span class="font-medium">R$ 2.299,00</span></p>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors">chevron_right</span>
+</div>
+</div>
+<hr class="mx-6 border-primary/5"/>
+<!-- Category: Clientes -->
+<div class="py-2">
+<h3 class="text-primary/60 text-xs font-bold uppercase tracking-wider px-6 py-3">Clientes</h3>
+<div class="flex items-center gap-4 hover:bg-primary/5 px-6 py-3 cursor-pointer group transition-colors">
+<div class="flex items-center justify-center rounded-full size-12 bg-primary/10 text-primary font-bold text-sm border border-primary/20">
+                            SM
+                        </div>
+<div class="flex flex-col justify-center flex-1">
+<p class="text-slate-900 dark:text-slate-100 text-sm font-semibold line-clamp-1 group-hover:text-primary transition-colors">
+<span class="text-primary">Smar</span>t Solutions LTDA
+                            </p>
+<p class="text-slate-500 dark:text-slate-400 text-xs">CNPJ: 12.345.678/0001-90 • São Paulo, SP</p>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors">person</span>
+</div>
+</div>
+<hr class="mx-6 border-primary/5"/>
+<!-- Category: Pedidos -->
+<div class="py-2">
+<h3 class="text-primary/60 text-xs font-bold uppercase tracking-wider px-6 py-3">Pedidos</h3>
+<div class="flex items-center gap-4 hover:bg-primary/5 px-6 py-3 cursor-pointer group transition-colors">
+<div class="flex items-center justify-center rounded-lg size-12 bg-slate-100 dark:bg-slate-800 text-slate-500 border border-primary/5">
+<span class="material-symbols-outlined">receipt_long</span>
+</div>
+<div class="flex flex-col justify-center flex-1">
+<div class="flex justify-between items-center pr-2">
+<p class="text-slate-900 dark:text-slate-100 text-sm font-semibold group-hover:text-primary transition-colors">
+                                    Pedido #8902 - <span class="text-primary">Smar</span>t Log
+                                </p>
+<span class="text-[10px] bg-amber-100 text-amber-700 px-2 py-0.5 rounded font-bold uppercase">Pendente</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-xs">Data: 12/10/2023 • Valor: R$ 12.450,00</p>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors">arrow_outward</span>
+</div>
+</div>
+</div>
+<!-- Modal Footer -->
+<div class="bg-primary/5 px-6 py-3 flex justify-between items-center text-[10px] text-slate-500 font-medium border-t border-primary/10">
+<div class="flex gap-4">
+<span class="flex items-center gap-1">
+<kbd class="px-1.5 py-0.5 bg-white border border-slate-300 rounded shadow-sm text-slate-700">ESC</kbd> para fechar
+                    </span>
+<span class="flex items-center gap-1">
+<kbd class="px-1.5 py-0.5 bg-white border border-slate-300 rounded shadow-sm text-slate-700">↑↓</kbd> para navegar
+                    </span>
+</div>
+<div class="flex items-center gap-1">
+                    Desenvolvido por <img alt="UNIQ Logo" class="h-3 grayscale opacity-50" data-alt="Logotipo UNIQ em escala de cinza" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDf4SCTSdIxgEaCt_tV63KWLKHvbEvixpZ_YnCi6Ed4V17CGBvO6cVejmOYkg3skWDOdbDGT9upBKrQ_oqiQwf20f3gtvM9296Cm8Fe-NvPAfJ7QZE0yhFBeQaJg6Q8zbgpzBEni7BDT9a5MZLiYYXnLFJ1tRDFjE7nNeFVvJJPK082mcM3o3NmaIbgk6geT0edxZmo8qx1AO1aHm-O-GgfCCwvYdKcBsqjO-YCf_ioe5_o8wkZvGXKGGpCEx-fTrR9VBKBjaZiXZdL"/>
+</div>
+</div>
+</div>
+</div>
+</body></html>
