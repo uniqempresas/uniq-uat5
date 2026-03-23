@@ -8,6 +8,8 @@ import { Header } from "@/components/header";
 import { SellerMetrics } from "@/components/marketplace/seller-metrics";
 import { ProductTable } from "@/components/marketplace/product-table";
 import { OrderCard } from "@/components/marketplace/order-card";
+
+export const dynamic = 'force-dynamic';
 import { ReviewItem } from "@/components/marketplace/review-item";
 import { ReviewDistribution } from "@/components/marketplace/review-distribution";
 import { Pagination } from "@/components/marketplace/pagination";

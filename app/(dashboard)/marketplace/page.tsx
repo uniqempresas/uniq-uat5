@@ -8,6 +8,8 @@ import { Header } from "@/components/header";
 import { SellerCard } from "@/components/marketplace/seller-card";
 import { SellerFilters } from "@/components/marketplace/seller-filters";
 import { Pagination } from "@/components/marketplace/pagination";
+
+export const dynamic = 'force-dynamic';
 import { EmptyState } from "@/components/marketplace/empty-state";
 import { useSellers } from "@/hooks/marketplace";
 import { MARKETPLACE_CATEGORIES, MARKETPLACE_LOCATIONS } from "@/types/marketplace";
