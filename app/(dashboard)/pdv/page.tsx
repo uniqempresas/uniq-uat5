@@ -1,10 +1,5 @@
 // app/(dashboard)/pdv/page.tsx
-import dynamic from 'next/dynamic';
-
-const PDVPage = dynamic(
-  () => import('@/app/(dashboard)/pdv/pdv-client').then((mod) => mod.PDVPage),
-  { ssr: false }
-);
+import PDVPage from './pdv-client';
 
 export default function PDVPageWrapper() {
   return <PDVPage />;
