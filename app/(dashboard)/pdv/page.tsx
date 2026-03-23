@@ -2,7 +2,7 @@
 import dynamic from 'next/dynamic';
 
 const PDVPage = dynamic(
-  () => import('./pdv-client').then((mod) => mod.PDVPage),
+  () => import('@/app/(dashboard)/pdv/pdv-client').then((mod) => mod.PDVPage),
   { ssr: false }
 );
 

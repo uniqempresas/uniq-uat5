@@ -2,7 +2,7 @@
 import dynamic from 'next/dynamic';
 
 const MinhaLojaClient = dynamic(
-  () => import('./minha-loja-client').then((mod) => mod.MinhaLojaClient),
+  () => import('@/app/(dashboard)/marketplace/minha-loja/minha-loja-client').then((mod) => mod.MinhaLojaClient),
   { ssr: false }
 );
 
