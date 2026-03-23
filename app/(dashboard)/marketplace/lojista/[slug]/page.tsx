@@ -15,6 +15,14 @@ import { StarRating } from "@/components/marketplace/star-rating";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { useSeller, useSellerProducts, useSellerReviews } from "@/hooks/marketplace";
 import { MARKETPLACE_CATEGORIES } from "@/types/marketplace";
+import { mockSellers } from "@/lib/mocks/marketplace";
+
+// Gerar páginas estáticas para cada lojista
+export function generateStaticParams() {
+  return mockSellers.map((seller) => ({
+    slug: seller.slug,
+  }));
+}
 
 type TabType = "products" | "reviews" | "about";
 

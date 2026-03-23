@@ -1,13 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  distDir: 'dist',
+  // output: 'export', // Removido - precisa de renderização dinâmica para Supabase
   images: {
     unoptimized: true,
-  },
-  experimental: {
-    workerThreads: false,
-    cpus: 1,
   },
   eslint: {
     ignoreDuringBuilds: true,
